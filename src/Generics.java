@@ -3,6 +3,7 @@ public class Generics {
     public static void main(String[] args) {
         Type<Integer> type = new Type<>();
         type.setData(30);
+        System.out.println(type.getData());
         System.out.println(type.data.getClass().getName());
     }
 

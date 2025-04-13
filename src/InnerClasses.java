@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Test {
+public class InnerClasses {
 
     public static void main(String[] args){
 
@@ -29,6 +29,7 @@ class A {
         public void add(){
             System.out.println(a+b);
         }
+
     }
 
 }

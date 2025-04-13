@@ -1,6 +1,6 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class CreatingThread {
 
     public static void main(String[] args){
         Thread thread = new Thread(() -> System.out.println("Thread is created by using lambda"));
@@ -21,10 +21,9 @@ public class Main {
         }
 
 }
-//class Test extends Thread{
-//
-//    @Override
-//    public void run() {
-//        System.out.println("The test thread is started");
-//    }
-//}
+class Test extends Thread{
+
+    @Override
+    public void run() {
+    }
+}
