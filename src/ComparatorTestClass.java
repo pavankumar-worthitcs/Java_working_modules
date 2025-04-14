@@ -13,8 +13,10 @@ public class ComparatorTestClass {
 
 
         //Before sorting the list
+        System.out.println(s_list);
 
-        s_list.sort((o1, o2) -> {
+        //sorting the student alphabetically of their first character of name
+        s_list.sort((o1, o2) -> {  //provided the sort implementation using comparator with the help of lambda expression.
 
             return Character.compare(o1.studentName.charAt(0), o2.studentName.charAt(0));
         });
