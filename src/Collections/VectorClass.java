@@ -1,5 +1,6 @@
 package Collections;
 
+import java.util.Enumeration;
 import java.util.Vector;
 
 public class VectorClass{
@@ -10,6 +11,7 @@ public class VectorClass{
         fruits.add("Apple");
         fruits.addElement("Banana");
         fruits.add("Cherry");
+        fruits.add("Mango");
 
         System.out.println("Fruits: " + fruits);
         System.out.println("First: " + fruits.firstElement());
@@ -17,6 +19,12 @@ public class VectorClass{
 
         fruits.remove("Banana");
         System.out.println("After removal: " + fruits);
+
+        //Enumeration --> it is only applicable for legacy classes
+        Enumeration<String> elements = fruits.elements();
+        while(elements.hasMoreElements()){
+            System.out.println(elements.nextElement());
+        }
     }
 
 }
