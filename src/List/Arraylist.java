@@ -1,6 +1,5 @@
-package Collections;
+package List;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.ListIterator;
 

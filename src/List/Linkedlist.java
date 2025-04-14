@@ -1,4 +1,4 @@
-package Collections;
+package List;
 
 import java.util.Collections;
 import java.util.LinkedList;

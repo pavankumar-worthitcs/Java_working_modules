@@ -1,4 +1,4 @@
-package Collections;
+package List;
 
 import java.util.Iterator;
 import java.util.Stack;
