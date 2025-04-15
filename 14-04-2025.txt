@@ -1,0 +1,42 @@
+Java Installation
+------------------
+
+==> Download JDK version 21.0 and install it.
+==>  After that, Download and install IDE (Recommended Intelli J Community Edition).
+==> choose your paths where you want save your directory.
+
+Git Basics
+----------
+
+==> Git is a version Control System.
+==> It is used to maintain and manage the code development on our local machine.
+
+GitHub
+------
+
+==> GitHub is cloud - based platform that lets you to manage, maintain and collaborate remotely.
+
+==> To create and update from our local system to remote repository, we have some git commands like Init, add, push, pull etc...
+
+Init: used to initialize .git in your local repository.
+
+Add: it a command used to add files to stage, which files will get into tracked changes.
+
+Commit: it is used to save your staged changes.
+
+Push: it is used to push your local changes or repositories to remote repositories.
+
+Pull: it is used to fetch changes from remote repository (GitHub).
+
+Merge: it is used to combine changes from one branch into another.
+
+Merge conflicts:
+
+   -> If there are no conflicts, Git just combines the changes.
+  -> If there are conflicts, Git will stop and ask you to resolve them manually.
+
+Clone: it is used to clone the remote repository into your local system.
+
+Branch: it is separate line of development, where your changes will not affect the main project.
+
+   
