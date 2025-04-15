@@ -206,3 +206,82 @@ boolean x = a < b  ||   b < a;
 
 System.out.println( s ); // true
 System.out.println( s ); // true
+
+4.Unary operator:
+----------------
+    
+ The operator which operates only on one operand.
+
+There are 3 operators in unary :
+
+1.	Increment ( ++ )
+2.	Decrement ( -- )
+3.	Logical NOT ( ! )
+
+1.Increment(++) :
+------------
+ --> Increasing the value by adding 1.
+
+There are two types of increments: 
+
+     Ex: int a  = 5;
+
+1. Pre increment -> increasing the value by 1 before using it. [ ++a ] a = 6;
+
+2. Post increment -> increasing the value after using it. [ a++] a = 6 in memory, but using the variable before increasing results a = 5;
+
+
+2) Decrement(--):
+-------------
+    --> Decreasing the value by 1.
+
+There are two types of decrements: 
+
+     Ex: int a = 5;
+
+1. Pre decrement -> decreasing the value by 1 before using it. [ --a ] a = 4;
+
+2. Post increment -> decreasing the value after using it. [ a--] a = 4 in memory, but using the variable before decreasing results a = 5;
+
+3) Logical Not(!)
+-----------------
+
+	It is a operator which works in the case of boolean input. 
+
+	It accepts only one operand which results boolean values.
+
+	It always works opposite  
+
+Ex: 
+
+ Input  true  !   -> false
+ Input  false !  ->   true
+
+               Int a = 20;
+
+              boolean s =  ! (a > 30);   a > 30  false  !   True;
+
+              System.out.println(s); // true
+
+
+5)Ternary operator:
+-------------------
+
+        -->  The operator which accepts two and more operands.
+
+Syntax:
+   
+             Condition ? true statement 1 : false statement 2 ;
+   
+            Example:
+                         Int a = 10
+                         Int b = 20;
+
+                       a > b ? System.out.println(“a is greater”);  : System.out.println(“b is greater”);  
+
+
+
+
+
+
+
