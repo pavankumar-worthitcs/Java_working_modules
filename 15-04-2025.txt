@@ -1,0 +1,208 @@
+Data Types:
+------------
+
+	Data type is used to specify which type of data should be stored.
+
+There are 2 Types of data types.
+
+1.	Primitive 
+2.	Non – Primitive
+
+Primitive data type
+---------------------
+
+           It is a predefined type that stores values directly in memory.
+
+There are 8 data types:
+
+Data Type	 Size	                             Description
+byte	        1 byte	                      Small integer (-128 to 127)
+short	        2 bytes	                    Medium integer (-32,768 to 32,767)
+int	        4 bytes                    Standard integer (-2^31 to 2^31-1)
+long	        8 bytes	                          Large integer
+float        	4 bytes                      Decimal number (less precision)
+double   	8 bytes                      Decimal number (more precision)
+char	        2 bytes	                         Single character (Unicode)
+Boolean  	1 bit	                  Logical values: true or false
+
+
+2) Non-primitive Data type
+--------------------------
+
+It a data type which is storing reference address of memory, which data is stored in that, rather than storing direct values.
+
+Ex: String 
+
+--> All custom objects will undergo Non-primitive type.
+
+
+Variables:
+---------
+
+Variables are block of memory where we can store data in it.
+
+Syntax:
+
+Datatype variableName = value;
+
+Ex: int a = 20;
+
+	Variable re-declaration is not possible, variable Re-Intialization is Possible.
+
+	Removing old data and updating with new data is known as Variable Re-initialization.
+
+
+There are 3 types of Variables
+
+1.	Local Variables
+2.	Static Variables
+3.	Instance Variables (Non – Static)
+
+1.Local Variables
+------------------
+
+	The variables which are declared within any method, block or constructor.
+	It can be accessible within that block.
+	It should be initialized before using it.
+            Ex: 
+                     Public static void greet(){
+
+                     String msge = “Hello”;
+                    System.out.println(msge);
+
+                 }
+
+2.Static Variables
+-------------------
+
+ The variables which are declared inside class and outside any method or block with “ static  ” keyword is called static variables.
+
+	Initialized only once when class is loaded.
+	It can be accessible anywhere within the class.
+	For each object of the class, it is same.
+
+
+Ex: 
+                    class Demo{
+          
+                                static int a = 30;
+
+                        public static void main(String[] args){
+                            System.out.println(a);
+
+                                  }
+                              }
+ 
+
+
+3.Non-static Variables
+----------------------
+
+ The variables which are declared inside class and outside any method without declaring static keyword is known as Non-static variables.
+
+	Each object of the class, get its own copy.
+
+	It contains default values like 0, 0.0, false, null.
+
+      Ex:
+           class Demo{ 
+     
+                     int age;
+                        
+                     public static void main(String[] args){
+
+                       System.out.println(“age : “+age);
+
+                            }
+                     }
+
+Operators
+---------
+
+	Operators are used to perform some operations on data or values.
+
+	There are 5 types of operators.
+
+1.	Arithmetic Operators
+2.	Relational Operators.
+3.	Logical Operators.
+4.	Unary Operators.
+5.	Ternary Operators.
+
+
+1.Arithmetic Operators
+----------------------    
+
+ The operators which are used to perform mathematical operations, such as 
+Addition( + ) , Subtraction ( - ),  Division( / ), Multiplication( * ), Modulus ( % ).
+
+Ex: 
+          int x = 10;
+          int y = 20;
+          int add = x + y;
+          int mul = x * y;
+          int sub = x – y ;
+          int div = x / y;
+          int mod = x % y;
+
+        System.out.println( add ); // 30
+        System.out.println( mul ); // 200
+        System.out.println( sub ); //  -10
+        System.out.println( div ); //  0
+        System.out.println( mod ); // 10
+
+
+
+2.Relational Operators
+----------------------
+
+ These operators are used to compare the values which results the boolean output.
+
+        Operator	Meaning	    Example (a = 10, b = 5)
+           ==	       Equal to 	a == b → false
+           !=	       Not equal to	a != b → true
+           >	       Greater than	a > b → true
+           <	       Less than	a < b → false
+           >=	     Greater or equal	a >= b → true
+           <=       	Less or equal	a <= b → false
+
+
+3.Logical Operators
+------------------
+
+ These operators are used to perform logical operations.
+
+    There are 2 types 
+
+1. AND ( && )
+2. OR  ( || )
+
+
+1.AND operator :
+---------------- 
+
+ AND operator returns true if the both given conditions are true.
+Ex: 
+             Int a  = 20;
+             Int b = 10 ;
+
+    boolean s =  a > b   &&   b < a  ;
+      boolean x = a < b  &&   b < a;
+
+System.out.println( s ); // true
+System.out.println( s ); // False
+
+2. OR operator
+--------------
+
+	OR operator return if any one the given condition is true.
+
+	Ex: 
+             Int a  = 20;
+             Int b = 10 ;
+
+boolean s =  a > b   ||   b < a  ;
+boolean x = a < b  ||   b < a;
+
+System.out.println( s ); // true
+System.out.println( s ); // true
