@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class ComparatorTestClass {
     public static void main(String[] args) {

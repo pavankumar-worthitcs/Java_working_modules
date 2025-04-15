@@ -4,6 +4,7 @@ import java.util.TreeMap;
 
 public class TreeMapClass {
     public static void main(String[] args) {
+        //it throws runtime exception,if key type is Object typ,because diff objects cannot be compared.
         TreeMap<Integer,Object> t_m = new TreeMap<>();
         t_m.put(101,"Pavan");
         t_m.put(106,true);
