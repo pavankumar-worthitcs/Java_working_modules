@@ -18,8 +18,12 @@ public class LinkedHashMapClass {
         //removing the entry based on key
         l_h_m.remove(true);
 
+        //forEach()
+        l_h_m.forEach((key,value)->{
+            System.out.println("Key : "+key+" Value : "+value);
+        });
 
-        //Using Entry set()
+        //Using Entryset()
         for( Map.Entry<Object,String> i : l_h_m.entrySet()){
             System.out.println("Key : "+i.getKey()+", Value : "+i.getValue());
         }
