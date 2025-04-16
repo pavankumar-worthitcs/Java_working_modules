@@ -15,10 +15,15 @@ public class GroupByUseClass {
                 ,new Person("kishor","Bangalore")
                 ,new Person("shekar","Bangalore"));
 
-        Map<String,List<Person>> groupedPersons =list.stream()
-                .collect(Collectors.groupingBy(Person::getCity));
+        Map<String,Long> countOfPeopleAlongWithCities =list.stream()
+                .collect(Collectors.groupingBy(Person::getCity , Collectors.counting()));
 
-        System.out.println(groupedPersons);
+
+
+        for(Map.Entry<String,Long> persons: countOfPeopleAlongWithCities.entrySet()){
+            System.out.println(persons.getValue()+" are from "+persons.getKey());
+        }
+
 
     }
 

@@ -3,7 +3,7 @@ package StreamApi;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
+
 
 public class StreamUseClass {
     public static void main(String[] args) {
@@ -17,12 +17,21 @@ public class StreamUseClass {
            Set<Student> sortedStudents =students.stream()
                 .sorted((studentPrev,studentNext)-> studentPrev.getStudentMarks() - studentNext.getStudentMarks())
                  .filter(student -> student.getStudentMarks() > 70)
+                   .map(student ->  {
+                       student.setStudentMarks(student.getStudentMarks() + 5);
+                       return student;
+                   })
                  .collect(Collectors.toSet());
 
            sortedStudents.forEach(System.out::println);
     }
 
-
+/**
+ * map(student ->  {
+ *                        student.setStudentMarks(student.getStudentMarks() + 5);
+ *                        return student;
+ *                    })
+ */
 
 
 }
