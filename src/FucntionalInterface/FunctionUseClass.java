@@ -1,6 +1,7 @@
 package FucntionalInterface;
 
 import java.util.function.Function;
+import java.util.function.Supplier;
 
 public class FunctionUseClass {
     public static void main(String[] args) {
@@ -18,7 +19,6 @@ public class FunctionUseClass {
         //displaying the generated key for User
 
         System.out.println("your generated key is : "+Math.abs(userGeneratedKey));
-
 
       //  System.out.println(userName.chars().sum()); we can use other ways for generating key
 
