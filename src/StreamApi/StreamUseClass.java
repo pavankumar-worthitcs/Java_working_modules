@@ -2,6 +2,7 @@ package StreamApi;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 
 
@@ -15,13 +16,17 @@ public class StreamUseClass {
         students.add(new Student(104,"Mark",68,72));
 
            Set<Student> sortedStudents =students.stream()
-                .sorted((studentPrev,studentNext)-> studentPrev.getStudentMarks() - studentNext.getStudentMarks())
+//
                  .filter(student -> student.getStudentMarks() > 70)
                    .map(student ->  {
-                       student.setStudentMarks(student.getStudentMarks() + 5);
-                       return student;
+                        student.setStudentMarks(student.getStudentMarks() + 5);
+                                return student;
+
                    })
-                 .collect(Collectors.toSet());
+                   .sorted((studentPrev,studentNext)-> studentNext.getStudentMarks() - studentPrev.getStudentMarks())
+                 .collect(Collectors.toCollection(LinkedHashSet::new));
+
+
 
            sortedStudents.forEach(System.out::println);
     }
