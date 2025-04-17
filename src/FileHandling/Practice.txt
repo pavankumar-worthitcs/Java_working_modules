@@ -1,0 +1,2 @@
+Hello, this is written using BufferedWriter
+hey, hello how are you !
