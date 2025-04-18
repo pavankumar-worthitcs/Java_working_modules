@@ -28,7 +28,7 @@ public class ReduceUseClass {
 
 
 }
-class Employee{
+public class Employee{
     private int EmployeeId;
     private String EmployeeName;
     private double EmployeeSalary;

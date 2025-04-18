@@ -1,3 +1,7 @@
+package Task_17_04_2025;
+
+import StreamApi.Employee;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -51,9 +55,9 @@ public class CollectionQuestion {
 
         List<List<Employee>> pageLayout = new ArrayList<>();
         for (Employee employeeFromList : employeesList) {
-            String strId = String.valueOf(employeeFromList.employeeId);
-            String strName = employeeFromList.employeeName;
-            String strSalary = String.valueOf(employeeFromList.employeeSalary);
+            String strId = String.valueOf(employeeFromList.getEmployeeId());
+            String strName = employeeFromList.getEmployeeName();
+            String strSalary = String.valueOf(employeeFromList.getEmployeeSalary());
             if (strId.contains(searchKey) || strName.contains(searchKey) || strSalary.contains(searchKey)) {
                 if (pageLayout.isEmpty()) {
                     pageLayout.add(new ArrayList<>());

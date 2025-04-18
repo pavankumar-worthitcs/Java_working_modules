@@ -1,8 +1,10 @@
+package Task_17_04_2025;
+import StreamApi.Employee;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class singleListOptimization {
+public class SingleListOptimization {
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
@@ -56,8 +58,8 @@ public class singleListOptimization {
         // Filter the employees that match the search
         List<Employee> matchedEmployees = new ArrayList<>();
         for (Employee emp : employeesList) {
-            if (String.valueOf(emp.employeeId).contains(searchKey) || emp.employeeName.toLowerCase().contains(searchKey) ||
-                    String.valueOf(emp.employeeSalary).contains(searchKey)) {
+            if (String.valueOf(emp.getEmployeeId()).contains(searchKey) || emp.getEmployeeName().toLowerCase().contains(searchKey) ||
+                    String.valueOf(emp.getEmployeeSalary()).contains(searchKey)) {
                 matchedEmployees.add(emp);
             }
         }
