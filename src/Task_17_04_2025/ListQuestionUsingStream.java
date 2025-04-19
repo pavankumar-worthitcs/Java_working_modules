@@ -1,30 +1,18 @@
 package Task_17_04_2025;
+
 import StreamApi.Employee;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Scanner;
 
-public class CollectionQuestion {
+public class ListQuestionUsingStream {
 
     public static void main(String[] args) {
         Scanner userInput = new Scanner(System.in);
-        System.out.print("Search :  ");
-        String searchKey = userInput.nextLine().toLowerCase();
-        System.out.print("Enter page Size : ");
-        int pageSize = userInput.nextInt();
-        if(searchKey.isEmpty() || pageSize == 0) return;
-        System.out.println("Enter page number : ");
-        int pageNumber = userInput.nextInt();
-        if(pageNumber == 0){
-            System.out.println("Entered page is Not valid");
-            return;
-        }
-        int count = 1;
-        int index = 0;
-
         List<Employee> employeesList = new ArrayList<>();
-        employeesList.add(new Employee(100, "kartik", 12000.0));
+        employeesList.add(new Employee(136, "kartik", 12000.0));
         employeesList.add(new Employee(111, "Roman", 20000.0));
         employeesList.add(new Employee(109, "Rosy", 15000.0));
         employeesList.add(new Employee(103, "Clara", 12500.0));
@@ -52,30 +40,41 @@ public class CollectionQuestion {
         employeesList.add(new Employee(130, "Rosy", 15000.0));
         employeesList.add(new Employee(131, "Clara1", 12500.0));
 
-        List<List<Employee>> pageLayout = new ArrayList<>();
-        for (Employee employeeFromList : employeesList) {
-            String strId = String.valueOf(employeeFromList.getEmployeeId());
-            String strName = employeeFromList.getEmployeeName();
-            String strSalary = String.valueOf(employeeFromList.getEmployeeSalary());
-            if (strId.contains(searchKey) || strName.contains(searchKey) || strSalary.contains(searchKey)) {
-                if (pageLayout.isEmpty()) {
-                    pageLayout.add(new ArrayList<>());
-                }
-                if (count > pageSize) {
-                    pageLayout.add(new ArrayList<>());
-                    index++;
-                    count = 1;
-                }
-                pageLayout.get(index).add(employeeFromList);
-                count++;
-            }
+        System.out.print("Search: ");
+        String searchKey = userInput.nextLine().toLowerCase();
+        if (searchKey.isEmpty() || !searchKey.matches(".*[a-zA-Z0-9].*")) {
+            System.out.println("Invalid searching ......");
+            return;
         }
-        if (pageNumber > 0 && pageNumber <= pageLayout.size()) {
-            for (Employee finalEmployee : pageLayout.get(pageNumber - 1))
-                System.out.println(finalEmployee);
-        } else
-            System.out.println("Enter valid page number");
+
+        System.out.print("Enter page size: ");
+        int pageSize = userInput.nextInt();
+
+        System.out.print("Enter page number starting from 1: ");
+        int pageNumber = userInput.nextInt();
+
+        if (pageNumber < 1) {
+            System.out.println("Invalid page number");
+            return;
+        }
+
+
+         List<Employee> pagedEmployees =employeesList.stream()
+                .filter(employee -> employee.getEmployeeName().toLowerCase().contains(searchKey)|| String.valueOf(employee.getEmployeeId()).toLowerCase().contains(searchKey) || String.valueOf(employee.getEmployeeSalary()).toLowerCase().contains(searchKey))
+                .sorted(Comparator.comparingInt(Employee::getEmployeeId))
+                 .skip((long)pageNumber * pageSize)
+                 .limit(pageSize)
+                 .toList();
+
+        if (pagedEmployees.isEmpty() && pageNumber > 1){
+            System.out.println("Invalid page number");
+            return ;
+        }
+
+        pagedEmployees.forEach(System.out::println);
+
+
+
+
     }
 }
-
-
